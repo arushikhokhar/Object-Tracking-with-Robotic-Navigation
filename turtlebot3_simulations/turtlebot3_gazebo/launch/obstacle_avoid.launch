@@ -1,0 +1,8 @@
+<launch>
+    <node name="camera_feed" pkg="turtlebot3_gazebo" type="camera_feed.py" output="screen">
+    </node>
+    <node name="target_follower" pkg="turtlebot3_gazebo" type="laser_obstacle_avoidance.py" output="screen">
+    </node>
+    <node name="model_service_node" pkg="turtlebot3_gazebo" type="obj_controller.py" output="screen">
+    </node>
+</launch>
