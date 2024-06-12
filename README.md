@@ -11,7 +11,9 @@ This repository contains the implementation of a robotic system designed to foll
      
 3. **Proportional-Derivative Control (PD-Control)**:
    - An advanced control algorithm that improves upon P-Control by adding a derivative term. This term accounts for the rate of change of the error, allowing for smoother and more responsive tracking, reducing oscillations and improving stability.
-
+  
+4. **Obstacle Avoidance with Target Following**:
+   - An algorithm to use the robot's LIDAR data to avoid obstacles while following the target. The robot follows a target but simultaneously avoids obstacles. Recovery and obstacle avoidance mechanisms have been implemented.
 ### System Architecture
 
 The system is composed of several ROS nodes:
@@ -70,6 +72,7 @@ First, launch the world. This world has a person's model in it by default. If yo
 `roslaunch turtlebot3_gazebo person_world.launch`
 
 Now, either use `roslaunch turtlebot3_gazebo p_control.launch` for object following using the proportional controller or use `roslaunch turtlebot3_gazebo pd_control.launch` for object following using the proportional derivative controller.
+Use `roslaunch turtlebot3_gazebo obstacle_avoidance.launch` for object following while avoiding obstacles.
 
 ## Moving the target object
 You'll now be able to move the target object around using yourr keyboard. Use the 'W', 'S', 'A', 'D' keys for forward, backward, left and right movements. Use the 'Q' and 'E' keys for clockwise and anti-clockwise rotations. Note, the controls might act a bit counter-intuititve due to different orientation of every model when the simulation begins.
@@ -79,6 +82,8 @@ You'll now be able to move the target object around using yourr keyboard. Use th
 ![Proportional Controller](https://github.com/arushikhokhar/Object-Tracking-with-Robotic-Navigation/blob/main/assets/p-control.gif)
 ### Proportional Derivative (PD) Controller
 ![Proportional Derivative Controller](https://github.com/arushikhokhar/Object-Tracking-with-Robotic-Navigation/blob/main/assets/pd-control.gif)
+### Obstacle Avoidance with Target Following
+![Proportional Derivative Controller](https://github.com/arushikhokhar/Object-Tracking-with-Robotic-Navigation/blob/main/assets/obstacle.gif)
 
 
 
